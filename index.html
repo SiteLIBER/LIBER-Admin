@@ -19,65 +19,306 @@
     </div>
 
     <div id="user">
-      <p><a href="#">admin@gmail.com</a> | <a href="#">Sair</a></p>
-
-      <nav id="other_systems">
-        <h3><span>Outros sistemas</span></h3>
-
-        <ul>
-          <li><a href="#">Controle interno</a></li>
-          <li><a href="#">Fórum</a></li>
-          <li><a href="#">Banco de informações</a></li>
-        </ul>
-      </nav>
+      <p><a href="#">admin@gmail.com</a> | <a id="logaut" href="#">sair</a></p>
     </div>
 
     <hr class="clear" />
   </header>
 
-  <section id="navigation">
-    <nav id="main_navigation">
-      <h3>Seções principais</h3>
+  <nav id="main_navigation">
+    <ul>
+      <li class="actived"><a href="#">Home</a></li>
+      <li><a href="#">Postagens</a></li>
+      <li><a href="#">Arquivos</a></li>
+      <li><a href="#">Autores</a></li>
+      <li><a href="#">Eventos</a></li>
+      <li><a href="#">Páginas</a></li>
+      <li id="user_section"><a href="#">Usuários</a></li>
+    </ul>
 
-      <ul>
-        <li class="actived has_subsections"><a href="#">Postagens</a></li>
-        <li class="has_subsections"><a href="#">Arquivos</a></li>
-        <li><a href="#">Comentários</a></li>
-        <li><a href="#">Eventos</a></li>
-        <li><a href="#">Páginas</a></li>
-        <li id="user_section"><a href="#">Usuários</a></li>
+    <hr class="clear" />
+  </nav>
+
+  <section id="content">
+    <div class="header">
+      <h3>Área de trabalho</h3>
+
+      <ul id="breadcrumbs">
+        <li><a href="#">Home</a></li>
       </ul>
 
-      <hr class="clear" />
-    </nav>
 
-    <nav id="subsections">
-      <h3>Postagens</h3>
+      <hr class="separator clear" />
+    </div>
 
-      <ul>
-        <li class="actived"><a href="#">Blog</a></li>
-        <li><a href="#">Artigos</a></li>
-        <li><a href="#">Categorias</a></li>
-      </ul>
-    </nav>
+    <!-- MAIN CONTENT BEGIN -->
+    <div id="main_content_wrapper">
+      <div id="main_content">
 
-    <nav id="breadcrumbs">
-      <ul>
-        <li><a href="#">Postagens</a></li>
-        <li>Blog</li>
-      </ul>
+        <div id="quick_post">
+          <!-- POST BOX BEGIN -->
+          <div id="post_box" class="box">
+            <h4>Postagem rápida</h4>
 
-      <hr class="clear" />
-    </nav>
-  </section>
+            <form id="post_form" class="simple_form">
 
-  <section id="main_content">
-    <h3>Blog</h3>
+              <div class="input string required">
+                <label for="titulo_input">
+                  <abbr title="Obrigatório">*</abbr>Título
+                </label>
+                <input type="text" id="titulo_input" class="title" />
+              </div>
+
+              <div class="input string required">
+                <label for="autores_input">
+                  <abbr title="Obrigatório">*</abbr>Autor(es)
+                </label>
+                <input type="text" id="autores_input" />
+              </div>
+
+              <div class="input string required">
+                <label for="resumo_input">
+                  <abbr title="Obrigatório">*</abbr>Resumo
+                </label>
+                <textarea id="resumo_input" /></textarea>
+              </div>
+
+              <div class="input string required">
+                <label for="conteudo_input">
+                  <abbr title="Obrigatório">*</abbr>Conteúdo
+                </label>
+                <textarea id="conteudo_input" /></textarea>
+              </div>
+
+              <div class="input string required">
+                <label for="destino_input">
+                  <abbr title="Obrigatório">*</abbr>Destino
+                </label>
+                <select id="destino_input">
+                  <option>Blog</option>
+                  <option>Artigos</option>
+                </select>
+              </div>
+
+              <div class="input string">
+                <label for="marcadores_input">Marcadores</label>
+                <input type="text" id="marcadores_input" />
+              </div>
+
+              <div class="actions">
+                <input type="submit" value="Publicar" />
+                <a href="#">Postagem expandida</a>
+                <a href="#">Ver todas</a>
+              </div>
+            </form>
+
+          </div>
+          <!-- POST BOX END -->
+
+          <!-- TAG BOX BEGIN -->
+          <div id="tags_box" class="box">
+            <h4>Marcadores</h4>
+
+            <form class="add_form">
+              <label from="marcador_nome_input">
+                <abbr title="Obrigatório">*</abbr>Adicionar marcador
+              </label>
+              <input type="text" id="marcador_nome_input" />
+              <input type="submit" value="Adicionar marcador" />
+            </form>
+
+            <ul class="tags">
+              <li>Libertarianismo
+                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+              </li>
+              <li>Governo
+                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+              </li>
+              <li>Burocracia
+                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+              </li>
+              <li>Liberdade
+                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+              </li>
+              <li>Capitalismo
+                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+              </li>
+              <li>Socialismo
+                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+              </li>
+              <li>Crise financeira
+                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+              </li>
+              <li>Mercado
+                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+              </li>
+              <li>Ética
+                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+              </li>
+            </ul>
+          </div>
+          <!-- TAG BOX END -->
+
+          <!-- AUTHORS BOX BEGIN -->
+          <div id="authors_box" class="box">
+            <h4><a href="#">Autores</a></h4>
+
+            <form class="add_form">
+              <label from="autor_nome_input">
+                <abbr title="Obrigatório">*</abbr>Adicionar autor
+              </label>
+              <input type="text" id="autor_nome_input" />
+              <input type="submit" value="Adicionar autor" />
+            </form>
+
+            <ul class="two_columns">
+              <li><a href="#">Bernardo Santoro</a></li>
+              <li><a href="#">Sidney Santana</a></li>
+              <li><a href="#">Filipe Seleti</a></li>
+              <li><a href="#">Pedro Duarte Jr</a></li>
+              <li><a href="#">Renato Drummond</a></li>
+              <li><a href="#">André Ramos</a></li>
+            </ul>
+
+            <br class="clear" />
+
+            <div class="actions">
+              <a href="#">Cadastrar autor</a>
+              <a href="#">Ver todos</a>
+            </div>
+          </div>
+          <!-- AUTHORS BOX END -->
+
+        </div>
 
 
+        <aside>
+          <!-- FILE BOX -->
+          <div id="file_box" class="box">
+            <h4><a href="#">Arquivos</a></h4>
+
+            <ul>
+              <li>
+                <a href="#">Crescimento da dívida pública</a> (jpg)
+                <span class="info">Por Bernardo Santoro, 08/08/2011 às 13:00</span>
+                <span class="link">http://www.pliber.org.br/publica/gastos_publicos.jpg</span>
+              </li>
+              <li>
+                <a href="#">Ata de reunião do Diretório Estadual do Rio de Janeiro</a> (pdf)
+                <span class="info">Por Bernardo Santoro, 08/08/2011 às 14:00</span>
+                <span class="link">http://www.pliber.org.br/publica/ata_rj_11082011.pdf</span>
+              </li>
+              <li>
+                <a href="#">Banner impostos</a> (jpg)
+                <span class="info">Por Herond Salles, 09/08/2011 às 22:00</span>
+                <span class="link">http://www.pliber.org.br/publica/banner_impostos.jpg</span>
+              </li>
+              <li>
+                <a href="#">Panfleto 'O Menor Quiz Político do Mundo'</a> (pdf)
+                <span class="info">Por Herond Salles, 11/08/2011 às 08:00</span>
+                <span class="link">http://www.pliber.org.br/publica/nolan.pdf</span>
+              </li>
+              <li>
+                <a href="#">Panfleto 'Porque o Partido Libertários é Diferente'</a> (pdf)
+                <span class="info">Por Herond Salles, 11/08/2011 às 09:00</span>
+                <span class="link">http://www.pliber.org.br/publica/nolan.pdf</span>
+              </li>
+            </ul>
+
+            <div class="actions">
+              <a href="#">Adicionar arquivo</a>
+              <a href="#">Ver todos</a>
+            </div>
+          </div>
+          <!-- FILE BOX END -->
+        </aside>
+
+      </div>
+
+    </div>
+    <!-- MAIN CONTENT END -->
+
+    <aside id="sidebar">
+      <!-- PAGES BOX BEGIN -->
+      <div id="pages_box" class="box">
+        <h4><a href="#">Páginas</a></h4>
+
+        <ul class="tree">
+          <li>Partido
+            <ul>
+              <li><a href="#">História</a></li>
+              <li><a href="#">Filosofia</a></li>
+              <li><a href="#">Programa</a></li>
+              <li><a href="#">Estatuto</a></li>
+              <li><a href="#">Lideranças</a></li>
+            </ul>
+          </li>
+
+          <li>Propostas
+            <ul>
+              <li><a href="#">Direitos individuais</a></li>
+              <li><a href="#">Comércio e economia</a></li>
+              <li><a href="#">Assuntos domésticos</a></li>
+              <li><a href="#">Relações exteriores</a></li>
+            </ul>
+          </li>
+
+          <li>Participe
+            <ul>
+              <li><a href="#">Divulgue</a>
+                <ul>
+                  <li><a href="#">Panfletos</a></li>
+                  <li><a href="#">Estampas de camisa</a></li>
+                  <li><a href="#">Banners para internet</a></li>
+                </ul>
+              </li>
+              <li><a href="#">LIBER 500</a></li>
+            </ul>
+          </li>
+
+          <li>Diretórios
+            <ul>
+              <li><a href="#">Região Norte</a></li>
+              <li><a href="#">Região Nordeste</a></li>
+              <li><a href="#">Região Sudeste</a></li>
+              <li><a href="#">Região Centro-Oeste</a></li>
+              <li><a href="#">Região Sul</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="actions">
+          <a href="#">Criar página</a>
+          <a href="#">Ver todos</a>
+        </div>
+      </div>
+      <!-- PAGES BOX END -->
+    </aside>
 
     <hr class="clear" />
   </div>
+
+  <footer>
+    <p>Libertários - O Partido da Liberdade</p>
+    <p>
+      <a href="#">Home</a> |
+      <a href="#">Postagens</a> |
+      <a href="#">Arquivos</a> |
+      <a href="#">Eventos</a> |
+      <a href="#">Páginas</a> |
+      <a href="#">Usuários</a>
+    </p>
+    <p><a href="#">Termos de uso</a> - <a href="#">política de privacidade</a></p>
+  </footer>
 
 </div>
 </body>
