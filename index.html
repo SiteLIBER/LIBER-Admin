@@ -5,6 +5,48 @@
 <head>
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/default.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/token-input-facebook.css" media="screen" />
+  <script type="text/javascript" src="javascripts/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+  <script type="text/javascript" src="javascripts/textedit_simple.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.tokeninput.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+        var autores = [
+            { 'id': '1', 'name': 'Bernardo Santoro' },
+            { 'id': '2', 'name': 'Sidney Santana' },
+            { 'id': '3', 'name': 'Filipe Seleti' },
+            { 'id': '4', 'name': 'Pedro uarte Jr' },
+            { 'id': '5', 'name': 'Renato Droumont' },
+            { 'id': '6', 'name': 'André Ramos' }
+        ]
+
+        $('#autores_input').tokenInput(autores, {
+            preventDuplicates: true,
+            theme: 'facebook'
+        });
+    });
+
+    $(document).ready(function () {
+        var marcadores = [
+            { 'id': '1', 'name': 'Libertarianismo' },
+            { 'id': '2', 'name': 'Governo' },
+            { 'id': '3', 'name': 'Burocracia' },
+            { 'id': '4', 'name': 'Liberdade' },
+            { 'id': '5', 'name': 'Capitalismo' },
+            { 'id': '6', 'name': 'Socialismo' },
+            { 'id': '6', 'name': 'Crise financeira' },
+            { 'id': '6', 'name': 'Mercado' },
+            { 'id': '6', 'name': 'Ética' }
+        ]
+
+        $('#marcadores_input').tokenInput(marcadores, {
+            preventDuplicates: true,
+            theme: 'facebook'
+        });
+    });
+  </script>
 
 	<title>Libertários - Administração</title>
 </head>
@@ -30,8 +72,8 @@
       <li class="actived"><a href="#">Home</a></li>
       <li><a href="#">Postagens</a></li>
       <li><a href="#">Arquivos</a></li>
-      <li><a href="#">Autores</a></li>
       <li><a href="#">Eventos</a></li>
+      <li><a href="#">Banners</a></li>
       <li><a href="#">Páginas</a></li>
       <li id="user_section"><a href="#">Usuários</a></li>
     </ul>
@@ -80,7 +122,7 @@
                 <label for="resumo_input">
                   <abbr title="Obrigatório">*</abbr>Resumo
                 </label>
-                <textarea id="resumo_input" /></textarea>
+                <textarea id="resumo_input" class="no_editor"></textarea>
               </div>
 
               <div class="input string required">
@@ -317,7 +359,7 @@
       <a href="#">Páginas</a> |
       <a href="#">Usuários</a>
     </p>
-    <p><a href="#">Termos de uso</a> - <a href="#">política de privacidade</a></p>
+    <p><a href="#">Termos de uso</a> - <a href="#">Política de privacidade</a></p>
   </footer>
 
 </div>

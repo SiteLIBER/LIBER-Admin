@@ -22,6 +22,10 @@ a:hover {
     text-decoration: underline;
 }
 
+img {
+    border: none;
+}
+
 /* CLASSES ================================================================== */
 
 /*
@@ -222,6 +226,10 @@ form.simple_form .input textarea {
     border-top-color: #666;
 }
 
+form.simple_form .input .mceEditor {
+    display: inline-block;
+}
+
 form.simple_form .actions {
     border-top: 1px dotted #ccc;
 }
@@ -260,12 +268,14 @@ form.add_form input[type="submit"] {
     text-shadow: 0px -1px 0px #000;
     border-radius: 0px 3px 3px 0px;
     border: 1px solid #444;
+    background-color: #4d5256;
     background: -webkit-gradient(linear, left top, left bottom, from(#6a7176), to(#4d5256));
 }
 
 form.add_form input[type="submit"]:hover {
     text-decoration: underline;
 }
+
 /* STRUCTURE ================================================================ */
 
 /*
@@ -275,6 +285,7 @@ form.add_form input[type="submit"]:hover {
 header {
     padding: 10px;
 
+    background-color: #4d5256;
     background: -webkit-gradient(linear, left top, left bottom, from(#6a7176), to(#4d5256));
 }
 
@@ -351,7 +362,7 @@ nav#main_navigation ul li.actived a:hover {
 */
 
 #content {
-    padding: 10px;
+    margin: 10px;
 }
 
 #content .header {
@@ -380,7 +391,7 @@ nav#main_navigation ul li.actived a:hover {
 }
 
 #content .header ul#breadcrumbs li:after {
-    content: "/"
+    content: "/";
 }
 
 /*
@@ -391,7 +402,6 @@ nav#main_navigation ul li.actived a:hover {
     margin-right: -310px;
     width: 100%;
     float: left;
-
 }
 
 #main_content {
