@@ -6,10 +6,13 @@
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/default.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/token-input-facebook.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/modal.css" media="screen" />
   <script type="text/javascript" src="javascripts/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
   <script type="text/javascript" src="javascripts/textedit_simple.js"></script>
   <script type="text/javascript" src="javascripts/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/jquery.tokeninput.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.modal.js"></script>
+  <script type="text/javascript" src="javascripts/application.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -63,8 +66,6 @@
     <div id="user">
       <p><a href="#">admin@gmail.com</a> | <a id="logaut" href="#">sair</a></p>
     </div>
-
-    <hr class="clear" />
   </header>
 
   <nav id="main_navigation">
@@ -88,7 +89,6 @@
       <ul id="breadcrumbs">
         <li><a href="#">Home</a></li>
       </ul>
-
 
       <hr class="separator clear" />
     </div>
@@ -171,40 +171,40 @@
 
             <ul class="tags">
               <li>Libertarianismo
-                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
-                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+                <a href="javascript:void(0);" class="button edit"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
               </li>
               <li>Governo
-                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
-                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+                <a href="javascript:void(0);" class="button edit"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
               </li>
               <li>Burocracia
-                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
-                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+                <a href="javascript:void(0);" class="button edit"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
               </li>
               <li>Liberdade
-                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
-                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+                <a href="javascript:void(0);" class="button edit"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
               </li>
               <li>Capitalismo
-                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
-                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+                <a href="javascript:void(0);" class="button edit"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
               </li>
               <li>Socialismo
-                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
-                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+                <a href="javascript:void(0);" class="button edit"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
               </li>
               <li>Crise financeira
-                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
-                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+                <a href="javascript:void(0);" class="button edit"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
               </li>
               <li>Mercado
-                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
-                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+                <a href="javascript:void(0);" class="button edit"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
               </li>
               <li>Ética
-                <a href="#" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
-                <a href="#" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+                <a href="javascript:void(0);" class="button edit"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+                <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
               </li>
             </ul>
           </div>
@@ -241,7 +241,6 @@
           <!-- AUTHORS BOX END -->
 
         </div>
-
 
         <aside>
           <!-- FILE BOX -->
@@ -345,9 +344,34 @@
       </div>
       <!-- PAGES BOX END -->
     </aside>
-
-    <hr class="clear" />
   </div>
+
+  <section id="windows">
+
+    <!-- EDIT TAG WINDOW BEGIN -->
+    <div class="window jqmWindow" id="edit_tag_window">
+      <div class="title_bar">
+        <h4>Editar marcador</h4>
+
+        <a class="close" href="javascript:void(0);"><span>Fechar</span></a>
+      </div>
+
+      <form class="simple_form">
+        <div class="input string required">
+          <label for="marcador_nome_input">
+            <abbr title="Obrigatório">*</abbr>Nome
+          </label>
+          <input type="text" id="marcador_nome_input" />
+        </div>
+
+        <div class="actions">
+          <input type="submit" value="Salvar" />
+        </div>
+      </form>
+    </div>
+    <!-- EDIT TAG WINDOW END -->
+
+  </section>
 
   <footer>
     <p>Libertários - O Partido da Liberdade</p>

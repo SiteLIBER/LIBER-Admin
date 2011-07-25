@@ -5,6 +5,15 @@
     font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
 }
 
+header:after, div:after, ol:after, form:after, ul:after, dl:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+
 body {
     background: #e6e6d2;
 }
@@ -46,6 +55,43 @@ img {
 }
 
 /*
+** Window
+*/
+
+.window {
+    border: 1px solid #fff;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.window .title_bar h4 {
+    float: left;
+
+    font-size: 14px;
+}
+
+.window .title_bar a.close {
+    padding-right: 25px;
+    display: block;
+    height: 16px;
+    float: right;
+
+    text-decoration: none;
+    background: url("../images/close_window_icon.png") no-repeat right center;
+}
+
+.window .title_bar a.close span {
+    display: none;
+
+    font-size: 12px;
+}
+
+.window .title_bar a.close:hover span {
+    padding-bottom: 5px;
+    display: block;
+}
+
+/*
 ** Box
 */
 
@@ -58,13 +104,17 @@ img {
     box-shadow: 0px 0px 10px rgba(0,0,0, 0.2);
 }
 
-.box h4 {
+.box h4,
+.window .title_bar {
     padding: 5px 10px;
 
     color: #fff;
     text-transform: uppercase;
-    border-radius: 5px 5px 0px 0px;
     background: #33393c;
+}
+
+.box h4 {
+    border-radius: 5px 5px 0px 0px;
 }
 
 .box h4 a {
@@ -101,13 +151,17 @@ img {
     word-wrap: break-word;
 }
 
-.box .actions {
+.box .actions,
+.window .actions {
     padding: 5px 10px;
 }
 
 .box .actions a,
 .box .actions input[type="submit"],
-.box .actions button {
+.box .actions button,
+.window .actions button,
+.window .actions a,
+.window .actions input[type="submit"] {
     padding: 5px 10px;
     display: inline-block;
 
@@ -122,7 +176,10 @@ img {
 }
 
 .box .actions input[type="submit"]:hover,
-.box .actions button:hover {
+.box .actions button:hover,
+.window .actions button:hover,
+.window .actions a:hover,
+.window .actions input[type="submit"]:hover {
     text-decoration: underline;
 }
 
