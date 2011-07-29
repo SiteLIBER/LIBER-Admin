@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/default.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/token-input-facebook.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/modal.css" media="screen" />
+  <script type="text/javascript" src="javascripts/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+  <script type="text/javascript" src="javascripts/textedit_simple.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.tokeninput.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.modal.js"></script>
+  <script type="text/javascript" src="javascripts/application.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+        var autores = [
+            { 'id': '1', 'name': 'Bernardo Santoro' },
+            { 'id': '2', 'name': 'Sidney Santana' },
+            { 'id': '3', 'name': 'Filipe Seleti' },
+            { 'id': '4', 'name': 'Pedro uarte Jr' },
+            { 'id': '5', 'name': 'Renato Droumont' },
+            { 'id': '6', 'name': 'André Ramos' }
+        ]
+
+        $('#autores_input').tokenInput(autores, {
+            preventDuplicates: true,
+            theme: 'facebook'
+        });
+    });
+
+    $(document).ready(function () {
+        var marcadores = [
+            { 'id': '1', 'name': 'Libertarianismo' },
+            { 'id': '2', 'name': 'Governo' },
+            { 'id': '3', 'name': 'Burocracia' },
+            { 'id': '4', 'name': 'Liberdade' },
+            { 'id': '5', 'name': 'Capitalismo' },
+            { 'id': '6', 'name': 'Socialismo' },
+            { 'id': '6', 'name': 'Crise financeira' },
+            { 'id': '6', 'name': 'Mercado' },
+            { 'id': '6', 'name': 'Ética' }
+        ]
+
+        $('#marcadores_input').tokenInput(marcadores, {
+            preventDuplicates: true,
+            theme: 'facebook'
+        });
+    });
+  </script>
+
+	<title>Libertários - Administração</title>
+</head>
+
+<body>
+<div id="wrapper">
+
+  <header>
+    <div id="system_name">
+      <h1>Libertários</h1>
+      <h2>Controle de conteúdo - pliber.org.br</h2>
+    </div>
+
+    <div id="user">
+      <p><a href="#">admin@gmail.com</a> | <a id="logaut" href="#">sair</a></p>
+    </div>
+  </header>
+
+  <nav id="main_navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="actived"><a href="postagens_index.html">Postagens</a></li>
+      <li><a href="#">Arquivos</a></li>
+      <li><a href="#">Eventos</a></li>
+      <li><a href="#">Banners</a></li>
+      <li><a href="#">Páginas</a></li>
+      <li id="user_section"><a href="#">Usuários</a></li>
+    </ul>
+
+    <hr class="clear" />
+  </nav>
+
+  <section id="content">
+    <div class="header">
+      <h3>Postagens</h3>
+
+      <ul id="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="postagens_index.html">Postagens</a></li>
+      </ul>
+
+      <hr class="separator clear" />
+    </div>
+
+    <!-- MAIN CONTENT BEGIN -->
+    <div id="main_content_wrapper">
+      <div id="main_content">
+
+        <ul id="submenu">
+          <li class="actived"><a href="postagens_index.html">Postagens</a></li>
+          <li><a href="marcadores_index.html">Marcadores</a></li>
+          <li><a href="autores_index.html">Autores</a></li>
+        </ul>
+
+        <table id="posts_table" class="list_itens">
+          <thead>
+            <tr>
+              <th class="id">Id</th>
+              <th>Postagem</th>
+              <th class="actions">Ações</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="id">#001</td>
+              <td>
+                <p><strong><a href="javascript:void(0);">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#002</td>
+              <td>
+                <p><strong><a href="javascript:void(0);">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#003</td>
+              <td>
+                <p><strong><a href="javascript:void(0);"> Maecenas ac diam lorem, at imperdiet lacus</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#004</td>
+              <td>
+                <p><strong><a href="javascript:void(0);">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#005</td>
+              <td>
+                <p><strong><a href="javascript:void(0);"> Maecenas ac diam lorem, at imperdiet lacus</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#006</td>
+              <td>
+                <p><strong><a href="javascript:void(0);">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#007</td>
+              <td>
+                <p><strong><a href="javascript:void(0);"> Maecenas ac diam lorem, at imperdiet lacus</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#008</td>
+              <td>
+                <p><strong><a href="javascript:void(0);">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#009</td>
+              <td>
+                <p><strong><a href="javascript:void(0);"> Maecenas ac diam lorem, at imperdiet lacus</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#010</td>
+              <td>
+                <p><strong><a href="javascript:void(0);"> Maecenas ac diam lorem, at imperdiet lacus</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#011</td>
+              <td>
+                <p><strong><a href="javascript:void(0);">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#012</td>
+              <td>
+                <p><strong><a href="javascript:void(0);"> Maecenas ac diam lorem, at imperdiet lacus</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#013</td>
+              <td>
+                <p><strong><a href="javascript:void(0);">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#014</td>
+              <td>
+                <p><strong><a href="javascript:void(0);"> Maecenas ac diam lorem, at imperdiet lacus</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">#015</td>
+              <td>
+                <p><strong><a href="javascript:void(0);">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></strong></p>
+                <p class="info">Publicado por Siney Santana.</p>
+                <p class="info">20 de Jan 2011</p>
+              </td>
+              <td class="actions">
+               <a href="javascript:void(0);" class="button"><img src="images/edit_icon.png" alt="Editar" title="Editar" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/delete_icon.png" alt="Excluir" title="Excluir" /></a>
+               <a href="javascript:void(0);" class="button"><img src="images/publish_icon.png" alt="Excluir" title="Publicar" /></a>
+              </td>
+            </tr>
+
+            <tfoot>
+              <tr>
+                <td colspan="3">
+                  <p class="pagination">
+                    <a class="current" href="javascript:void(0);" >1</a>
+                    <a href="javascript:void(0);" >2</a>
+                    <a href="javascript:void(0);" >3</a>
+                    <span>...</span>
+                    <a href="javascript:void(0);" class="last">Útimo >></a>
+                  </p>
+                </td>
+              </tr>
+            </tfoot>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+    <!-- MAIN CONTENT END -->
+
+    <aside id="sidebar">
+
+    </aside>
+  </div>
+
+  <section id="windows">
+
+  </section>
+
+  <footer>
+    <p>Libertários - O Partido da Liberdade</p>
+    <p>
+      <a href="#">Home</a> |
+      <a href="#">Postagens</a> |
+      <a href="#">Arquivos</a> |
+      <a href="#">Eventos</a> |
+      <a href="#">Páginas</a> |
+      <a href="#">Usuários</a>
+    </p>
+    <p><a href="#">Termos de uso</a> - <a href="#">Política de privacidade</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
+
