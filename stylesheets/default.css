@@ -90,14 +90,42 @@ table tbody tr td.id {
 }
 
 table tbody tr td.actions {
-    width: 60px;
+    width: 120px;
 
     text-align: center;
+}
+
+table tbody tr td.actions a {
+    padding: 3px 10px;
+    display: inline-block;
+
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr td.actions a:hover {
+    border: 1px solid #444;
 }
 
 table tbody tr td p.info {
     color: #444;
     font-size: 13px;
+}
+
+table tbody tr td p.info .section {
+    padding: 3px 10px;
+
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+    border-radius: 3px;
+    background: #ddd;
+}
+
+table tbody tr td p.info .section:hover {
+    color: #ddd;
+    text-decoration: none;
+    text-shadow: none;
+    background: #444;
 }
 
 table tfoot {
@@ -127,6 +155,32 @@ table tfoot tr td {
 
 .separator {
     border-bottom: 1px solid #000;
+}
+
+/*
+** Actions
+*/
+
+aside ul.actions {
+    list-style: none;
+}
+
+aside ul.actions li {
+    margin-bottom: 10px;
+}
+
+aside ul.actions li a {
+    padding: 10px 20px 10px 50px;
+    display: block;
+
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2),
+        inset 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+aside ul.actions li.new a {
+    background: #fff url("../images/new_24_icon.png") no-repeat 10px center;
 }
 
 /*
